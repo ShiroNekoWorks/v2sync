@@ -3,5 +3,5 @@
 
 # v2sync
 
-[English](/v2sync/v2sync/blob/master/README.md) | 简体中文
+[English](https://github.com/v2sync/v2sync/blob/master/README.md) | 简体中文
 </div>
