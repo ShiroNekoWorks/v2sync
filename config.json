@@ -1,0 +1,38 @@
+{
+    "global":{
+        "path": "v2sync/%uuid%"
+    },
+    "node": {
+        "sub1": {
+            "type": "sub",
+            "nick": "sub1",
+            "link": "https://example.com/xxx"
+        },
+        "tudog": {
+            "type": "sub",
+            "nick": "sub2",
+            "link": "https://example.com/xxx"
+            },
+        "custom": {
+            "type": "custom",
+            "nick": null,
+            "order": ["custom1"],
+            "detail": {
+                "custom1":{
+                    "v": "2",
+                    "ps": "Rendered by v2sync",
+                    "add": "localhost",
+                    "port": "8888",
+                    "id": "380a629e-eeef-4e5c-90e0-df7ef5c1947b",
+                    "aid": "0",
+                    "net": "ws",
+                    "type": "none",
+                    "host": "https://github.com/v2sync/v2sync",
+                    "path": "/v2sync/v2sync",
+                    "tls": "tls"
+                    }
+                }
+            }
+        }
+    }
+}
