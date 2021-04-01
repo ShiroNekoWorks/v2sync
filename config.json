@@ -30,7 +30,6 @@
                     "host": "https://github.com/v2sync/v2sync",
                     "path": "/v2sync/v2sync",
                     "tls": "tls"
-                    }
                 }
             }
         }
