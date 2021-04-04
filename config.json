@@ -1,6 +1,6 @@
 {
     "global":{
-        "path": "v2sync/%uuid%/%token%/v2sync-config"
+        "path": "v2sync/v2sync-config.txt"
     },
     "node": {
         "sub1": {
