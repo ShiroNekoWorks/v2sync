@@ -1,6 +1,6 @@
 {
     "global":{
-        "path": "v2sync/%uuid%/%token%/v2sync-config"
+        "path": "v2sync/v2sync-config.txt"
     },
     "node": {
         "sub1": {
@@ -19,17 +19,19 @@
             "order": ["custom1"],
             "detail": {
                 "custom1":{
-                    "v": "2",
-                    "ps": "Rendered by v2sync",
-                    "add": "localhost",
-                    "port": "8888",
-                    "id": "380a629e-eeef-4e5c-90e0-df7ef5c1947b",
-                    "aid": "0",
-                    "net": "ws",
-                    "type": "none",
-                    "host": "https://github.com/v2sync/v2sync",
-                    "path": "/v2sync/v2sync",
-                    "tls": "tls"
+                    "host":"localhost",
+                    "path":"/shironekoworks/v2sync",
+                    "tls":"",
+                    "verify_cert":true,
+                    "add":"github.com",
+                    "port":"8888",
+                    "aid":"1",
+                    "net":"ws",
+                    "type":"none",
+                    "v":"2",
+                    "ps":"ShiroNekoWorks/v2sync on Github",
+                    "id":"380a629e-eeef-4e5c-90e0-df7ef5c1947b",
+                    "class":0
                 }
             }
         }
