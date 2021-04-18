@@ -5,5 +5,5 @@ def Decode(string):
     return result
 
 def Encode(string):
-    result=base64.b46encode(string)
+    result=base64.b64encode(string)
     return result

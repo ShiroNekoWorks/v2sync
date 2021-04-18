@@ -38,12 +38,20 @@ def read_config(file):
         config = js.load(json_file)
     return config
 
+def GetNodeConfig(conf):
+    keylist=conf['node'].keys()
+    print(keylist)
+
 # def write_config(file,content):
 #     with open(file,'wb') as json_file:
 #         js.dump(content,json_file)
 
 def create_dictionary(path):
     os.mkdir(path)
+
+def GetSubContent(url):
+    content=r.get(url).text
+    return(content)
 
 if __name__ == "__main__":
     clean_public()
@@ -58,3 +66,6 @@ if __name__ == "__main__":
         parent_path=parent_path+'/'+i
     filename=pathlist[len(pathlist)-1]
     print(filename)
+    GetNodeConfig(conf)
+
+
