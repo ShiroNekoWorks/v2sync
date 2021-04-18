@@ -8,7 +8,7 @@
             "nick": "sub1",
             "link": "https://example.com/xxx"
         },
-        "tudog": {
+        "sub2": {
             "type": "sub",
             "nick": "sub2",
             "link": "https://example.com/xxx"

@@ -1,10 +1,20 @@
 <head>
-    <shortcut icon='https://cdn.jsdelivr.net/gh/v2sync/v2sync/assets/favicon.png'></shortcut>
+    <title>v2sync - ShiroNekoWorks</title>
 </head>
-
 <body>
-    <div align='center'>
-        <img src='https://cdn.jsdelivr.net/gh/v2sync/v2sync/assets/favicon.png'>
-        <p>{{ path }}</p>
+    <style>
+        .content{position: absolute; left:50%; text-align: center; transform: translate(-50%,100px); min-width: 400px;}
+    </style>
+    <div align='center' id='content'>
+        <img src='/favicon.png'>
+        <p>If you see this page, the v2sync is successfully installed and working.</p>
+        <p>For online documentation and support please refer to <a href="https://github.com/ShiroNekoWorks/v2sync">https://github.com/ShiroNekoWorks/v2sync</a>.</p>
+        {% if path_enable %}
+            <p>Now you can visit <a id='path' href='{% path %}'>{% path %}</a> to get your subscription.</p>
     </div>
 </body>
+<footer>
+    <div align='center'>
+        <p>Project <a href='https://github.com/ShiroNekoWorks/v2sync'>v2sync</a> Made by ❤ <a href="https://github.com/ShiroNekoWorks">ShiroNekoWorks</a></p>
+    </div>
+</footer>
