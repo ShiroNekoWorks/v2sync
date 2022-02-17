@@ -1,60 +1,36 @@
-from utils.Base64Function import Decode,Encode
-from utils.Generate import Generate
-from utils.Render import Render
-import requests as r
+from utils.Subscribe import subscribe
 import json as js
-import uuid
-import random
-import string
-from pprint import pprint
 import os
 import shutil
-
-# def config_var_substitute():
-    # if('%uuid%' in str(conf)):
-    #     newuuid=uuid.uuid1()
-    #     conf=str(conf).replace('%uuid%',str(newuuid))
-    #     print(newuuid)
-    # if('%token%' in str(conf)):
-    #     token = ''.join(random.sample(string.ascii_letters + string.digits, 24))
-    #     conf=str(conf).replace('%token%',token)
-    #     print(token)
-    # conf=eval(conf)
-    # write_conf=js.dumps(conf,indent=4)
-    # print(type(conf))
-    # print(conf)
-    # pprint(conf)
-    # write_config('config.json',write_conf)
+import base64
 
 def clean_public():
+    '''
+    Clean the public folder before the rendering process
+    '''
     shutil.rmtree('./public')
     os.mkdir('public')
     with open('./public/.gitkeep','wb') as f:
         f.writelines('')
-        f.close
+        f.close()
 
 def read_config(file):
+    '''
+    Get config from the file
+    '''
     with open(file) as json_file:
         config = js.load(json_file)
     return config
 
-def GetNodeConfig(conf):
-    keylist=conf['node'].keys()
-    print(keylist)
-
-# def write_config(file,content):
-#     with open(file,'wb') as json_file:
-#         js.dump(content,json_file)
-
 def create_dictionary(path):
+    '''
+    Create a dictionary from the subscription file
+    '''
     os.mkdir(path)
-
-def GetSubContent(url):
-    content=r.get(url).text
-    return(content)
 
 if __name__ == "__main__":
     clean_public()
+    # Create the folder from the path
     conf=read_config('config.json')
     global_conf=conf['global']
     pathlist=global_conf['path'].split('/')
@@ -64,8 +40,43 @@ if __name__ == "__main__":
             break
         create_dictionary(parent_path+'/'+i)
         parent_path=parent_path+'/'+i
+    # Creation completed
     filename=pathlist[len(pathlist)-1]
-    print(filename)
-    GetNodeConfig(conf)
 
+    # Start getting the data from the subscriptions
+    subs=conf['subs']
+    SubList = []
+    for sub in subs:
+        if subs[sub]['type']=='sub':
+            SubInfo=subscribe(subs[sub]['link'],subs[sub]['nick'])
+            SubList.append(SubInfo)
+    # End getting the data from the subscriptions
+
+    # Base64 decoding to get the vmess link
+    DecodedList = []
+    for i in SubList:
+        if SubList.index(i) == len(SubList) - 1:
+            Decoded = base64.b64decode(i).decode()  # The last one should not contain a ENTER
+        else:
+            Decoded = base64.b64decode(i).decode() + '\n'
+        DecodedList.append(Decoded)
+    # End base64 decoding
+    
+    # Start combine all the links to a string for encoding
+    Combined = ''
+    for i in DecodedList:
+        Combined += i
+    # End combine all the links to a string for encoding
+
+    # Start encoding the string to formal vmess subscription format
+    Encoded = base64.b64encode(Combined.encode())
+    # End encoding the string to formal vmess subscription format
+
+    # Start writing the data to the file
+    with open(conf['global']['path'], 'wb') as f:
+        f.write(Encoded)
+        f.close()
+    # End writing the data to the file
+
+    print('Done!')
 
