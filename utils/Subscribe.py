@@ -15,8 +15,8 @@ if __name__ == '__main__':
     subs = config['subs']
     subls = []
     for sub in subs:
-        if sub['type'] == 'sub':
-            subls.append((sub['nick'],sub['url']))
+        if subs[sub]['type'] == 'sub':
+            subls.append((subs[sub]['nick'],subs[sub]['link']))
     SubData = ''
     for nick,url in subls:
         SubData += subscribe(url)
