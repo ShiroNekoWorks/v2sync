@@ -12,27 +12,6 @@
             "type": "sub",
             "nick": "sub2",
             "link": "https://example.com/xxx"
-            },
-        "custom": {
-            "type": "custom",
-            "nick": null,
-            "order": ["custom1"],
-            "detail": {
-                "custom1":{
-                    "host":"localhost",
-                    "path":"/shironekoworks/v2sync",
-                    "tls":"",
-                    "verify_cert":true,
-                    "add":"github.com",
-                    "port":"8888",
-                    "aid":"1",
-                    "net":"ws",
-                    "type":"none",
-                    "v":"2",
-                    "ps":"ShiroNekoWorks/v2sync on Github",
-                    "id":"380a629e-eeef-4e5c-90e0-df7ef5c1947b",
-                    "class":0
-                }
             }
         }
     }
