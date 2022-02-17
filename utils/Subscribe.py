@@ -26,6 +26,9 @@ def subscribe(url, name):
         return base64.b64encode(str(VmessLink).replace('\n',''))
 
 if __name__ == '__main__':
+    '''
+    Code for debug, also for single subscription
+    '''
     with open('../config.json','rt') as f:
         config = f.read()
         f.close()
