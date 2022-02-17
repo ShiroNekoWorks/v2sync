@@ -2,7 +2,7 @@
     "global":{
         "path": "v2sync/v2sync-config.txt"
     },
-    "node": {
+    "subs": {
         "sub1": {
             "type": "sub",
             "nick": "sub1",
