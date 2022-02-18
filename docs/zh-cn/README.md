@@ -12,7 +12,7 @@
 
 ## 快速开始
 
-本项目仍在开发，你可以等到我们发出稳定版后进行使用……
+本项目已经可以部署了！先把这个项目Fork到你的账户下，修改`config.json`里面的链接，然后用Github Action里面的脚本进行更新，最后使用Github Pages或者CloudFlare Pages等服务进行页面部署即可！
 
 ## 使用场景
 
@@ -22,7 +22,9 @@
 
 ## Demo
 
-Demo还没有部署，他将会在未来带着一堆免费节点与大家见面(\*^▽^\*)
+Demo中的链接都能在[https://airports.share4nothing.ml](https://airports.share4nothing.ml)中找到哦！
+
+https://v2sync.share4nothing.cf/
 
 ## 联系方式
 

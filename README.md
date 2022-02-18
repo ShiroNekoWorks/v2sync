@@ -12,7 +12,7 @@ This is a project helps you manage your tons of v2ray subscribe links. You can u
 
 ## Gettings Started
 
-This project is developing... So wait for its stable version published so that you can use it. XD
+This project can be deployed now. You can fork it to your account, change the `config.json` and use update the subscription by using Github Action. Than publish the page by using Github Pages or Cloudflare Pages etc..
 
 ## Scenes to be Used
 
@@ -22,7 +22,9 @@ This project is developing... So wait for its stable version published so that y
 
 ## Demo
 
-Demo is not been published yet. It'll be online in the future with some free nodes (\*^▽^\*)
+All the subscription in demo can be found at [https://airports.share4nothing.ml](https://airports.share4nothing.ml)
+
+https://v2sync.share4nothing.cf/
 
 ## Contact
 
