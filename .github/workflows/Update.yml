@@ -1,0 +1,33 @@
+name: Update
+
+on: 
+  workflow_dispatch:  # Manually Start by Clicking the Button of Workflow
+  release:
+    types: [published]
+  push:
+    tags:
+    - 'v*'
+  #  branches: 
+  #    - master
+  schedule:
+    - cron: "0 0 * * *" # Daliy Update
+  watch:
+    types: [started]
+   
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    if: github.event.repository.owner.id == github.event.sender.id  # Click STAR to start
+    steps:
+    - name: Checkout
+      uses: actions/checkout@master
+    - name: Set up Python
+      uses: actions/setup-python@v1
+      with:
+        python-version: 3.8
+    - name: Install requirements
+      run: |
+        pip install -r requirements.txt
+    - name: Run script
+      run: |
+        python3 main.py "${{ secrets.cookie }}" "${{ secrets.teleid }}" "${{ secrets.teletoken }}" "${{ secrets.SCKEY }}" "${{ secrets.QQKEY }}" "${{ secrets.PPKEY }}"
