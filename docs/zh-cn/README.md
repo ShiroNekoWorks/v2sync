@@ -1,5 +1,5 @@
 <div align="center">
-<img src='https://cdn.jsdelivr.net/gh/v2sync/v2sync@master/assets/favicon.png' width='128px' title='v2sync-logo'></img><br>
+<img src='https://cdn.jsdelivr.net/gh/ShiroNekoWorks/v2sync@master/assets/favicon.png' width='128px' title='v2sync-logo'></img><br>
 
 # v2sync
 
