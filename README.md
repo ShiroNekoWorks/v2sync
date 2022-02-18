@@ -24,7 +24,9 @@ This project can be deployed now. You can fork it to your account, change the `c
 
 All the subscription in demo can be found at [https://airports.share4nothing.ml](https://airports.share4nothing.ml)
 
-https://v2sync.share4nothing.cf/
+HomePage: https://v2sync.share4nothing.cf/
+
+Subscription: https://v2sync.share4nothing.cf/public/v2sync/v2sync-config.txt
 
 ## Contact
 

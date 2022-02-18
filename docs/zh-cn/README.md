@@ -24,7 +24,9 @@
 
 Demo中的链接都能在[https://airports.share4nothing.ml](https://airports.share4nothing.ml)中找到哦！
 
-https://v2sync.share4nothing.cf/
+主页：https://v2sync.share4nothing.cf/
+
+订阅链接：https://v2sync.share4nothing.cf/public/v2sync/v2sync-config.txt
 
 ## 联系方式
 
